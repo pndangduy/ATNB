@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book Management System</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="~/Scripts/DataTables/datatables.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="~/Content/site.css" />
+</head>
+
+<body>
+    <ul id="main-nav"
+        class="nav nav-pills flex-row bg-light border-bottom">
+        <li class="nav-item">
+            <a class="flex-fill nav-link text-black-50 font-weight-bold" href="/Home/GetAllBooks">
+                Book Management System
+            </a>
+        </li>
+
+        <li class="nav-item flex-grow-1"></li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle bg-light" data-toggle="dropdown"
+               href="#" role="button">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">
+                    Empty
+                </a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle bg-light" data-toggle="dropdown"
+               href="#" role="button">
+                <i class="fas fa-stream"></i>
+            </a>
+
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">
+                    Empty
+                </a>
+            </div>
+        </li>
+
+        <!-- Notification -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle bg-light" data-toggle="dropdown"
+               href="#" role="button">
+                <i class="fas fa-bell"></i>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">
+                    Empty
+                </a>
+            </div>
+        </li>
+
+        <!-- Account -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle bg-light" data-toggle="dropdown"
+               href="#" role="button">
+                <i class="fas fa-user"></i>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">
+                    <i class="fas fa-user"></i> User Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item" href="@Url.Action("Logout","Account",new { Area = "" })">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </li>
+    </ul>
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div id="main-sidebar" class="bg-light border-right">
+                <form id="management-search-form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item bg-transparent" href="@Url.Action("Index","Admin")">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                    <a class="list-group-item bg-transparent" href="@Url.Action("Index","Categories")">
+                        <i class="far fa-list-alt"></i> Danh mục sách
+                    </a>
+                    <a class="list-group-item bg-transparent" href="@Url.Action("Index","Authors")">
+                        <i class="far fa-list-alt"></i> Quản lý tác giả
+                    </a>
+                    <a class="list-group-item bg-transparent" href="@Url.Action("Index","Publishers")">
+                        <i class="fas fa-edit"></i> Quản lý nhà xuất bản
+                    </a>
+                    <a class="list-group-item bg-transparent" href="@Url.Action("Index","Books")">
+                        <i class="fas fa-wrench"></i> Quản lý sách
+                    </a>
+                    <a class="list-group-item bg-transparent" href="@Url.Action("Index","Comments")">
+                        <i class="fas fa-wrench"></i> Quản lý Comment
+                    </a>
+                    <hr />
+                </div>
+            </div>
+
+            <div id="management-container">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/accounting.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/site.js"></script>
+</body>
+</html>

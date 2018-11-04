@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="~/Content/site.css" />
+</head>
+
+<body>
+    <div class="container index">
+        <header class="text-right">
+            <div class="d-inline" style="margin-right: 24px">
+                Welcome,
+                @if (String.IsNullOrEmpty(Session["Username"].ToString()))
+                {
+                    <a class="font-weight-bold" href="@Url.Action("Login","Account")">Guest</a>
+                }
+                else
+                {
+                    <a class="font-weight-bold" href="@Url.Action("Index","Admin",new {Area ="Admin" })">@Session["Username"].ToString()</a>
+                }
+            </div>
+
+            <div class="d-inline">
+                <i class="fas fa-shopping-basket text-primary" style="font-size: 24px"></i>
+                Shopping Cart (0) <a class="font-weight-bold" href="#">$0.00</a>
+            </div>
+        </header>
+
+        <nav class="nav flex-row align-items-end">
+            <img class="logo" src="~/Assets/logo.jpg" />
+
+            <div class="nav-item flex-grow-1"></div>
+
+            <a class="nav-link active" href="@Url.Action("GetAllBooks", "Home")">Home</a>
+            <a class="nav-link" href="#">Products</a>
+            <a class="nav-link" href="#">Promotions</a>
+            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="#">Contacts</a>
+        </nav>
+
+        <div class="row">
+            <div class="col-3 ">
+                <ul class="list-group list-group-flush catelogies" style="margin-bottom: 32px;">
+                    @Html.Action("GetAllCategory", "Home")
+                </ul>
+
+                <!--  -->
+
+                <ul class="list-group list-group-flush authors">
+                    @Html.Action("GetAllAuthor", "Home")
+                </ul>
+            </div>
+
+            <div class="col-9 featured-products">
+                <h4 class="text-primary font-italic">Featured Products</h4>
+
+                <div class="products d-flex flex-wrap flex-row justify-content-left">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+
+        <script type="text/javascript" src="~/Scripts/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/accounting.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/site.js"></script>
+</body>
+</html>

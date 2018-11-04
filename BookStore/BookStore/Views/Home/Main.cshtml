@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DTO.BookList>
+@{
+    ViewBag.Title = "Main";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@foreach (var book in Model)
+{
+    <div class="product" style="display:flex">
+        <div class="card">
+            <img class="card-img-top" src="~/Assets/image.jpg" style="height:50%">
+
+            <div class="card-body">
+                <div class="name text-primary font-weight-bold">@book.Title</div>
+                <div class="author text-dark font-weight-bold">by @book.AuthorName</div>
+
+                <p class="card-text text-muted">
+                    @book.Summary
+                </p>
+            </div>
+
+            <div class="card-footer d-flex flex-row">
+                <div class="btn btn-dark">BUY NOW</div>
+
+                <div class="price">
+                    <small>$</small>@book.Price<sup>00</sup>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

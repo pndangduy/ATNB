@@ -1,0 +1,7 @@
+F:\EverythingOfFresher\BookStore\DAO\bin\Debug\DAO.dll
+F:\EverythingOfFresher\BookStore\DAO\bin\Debug\DAO.pdb
+F:\EverythingOfFresher\BookStore\DAO\bin\Debug\DTO.dll
+F:\EverythingOfFresher\BookStore\DAO\bin\Debug\DTO.pdb
+F:\EverythingOfFresher\BookStore\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+F:\EverythingOfFresher\BookStore\DAO\obj\Debug\DAO.dll
+F:\EverythingOfFresher\BookStore\DAO\obj\Debug\DAO.pdb

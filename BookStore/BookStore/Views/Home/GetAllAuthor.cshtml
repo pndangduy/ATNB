@@ -1,0 +1,10 @@
+﻿@model IEnumerable<DTO.Author>
+
+<h4 class="text-primary font-italic">Authors</h4>
+
+@foreach (var author in Model)
+{
+    <li class="list-group-item">
+        <a href="@Url.Action("GetAllBooksByAuthorID","Home",new {authorID = author.AuthorID })">@author.AuthorName</a>
+    </li>
+}
