@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "GetAllBook";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Quản lý sách</h3>
+<hr />
+@Html.ActionLink("Create New", "CreateBook")
+
+<table id="books-table" class="table">
+    <thead>
+        <tr>
+            <th scope="col">Book ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Image Book</th>
+            <th scope="col">Is Active</th>
+            <th scope="col" colspan="3">Action</th>
+        </tr>
+    </thead>
+
+    <tbody id="tblData"></tbody>
+</table>
+<div id="pagination" class="pagination">
+</div>
+
+<script type="text/javascript" src="~/Scripts/jquery.twbsPagination.min.js"></script>
+

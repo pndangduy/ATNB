@@ -1,0 +1,104 @@
+﻿@model DTO.Book
+@{
+    ViewBag.Title = "CreateBook";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div id="management-container">
+    <h3>Thêm mới sách</h3>
+    <hr />
+
+    @using (Html.BeginForm("CreateBook", "Book", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold text-right">Summary :</label>
+            <div class="col-sm-9">
+                @Html.TextAreaFor(x => x.Summary, new { @class = "form-control", @type = "text", @required = "required" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold text-right">Title :</label>
+            <div class="col-sm-9">
+                @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @required = "required" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold text-right">Category Name</label>
+            <div class="col-sm-9">
+                <select name="category-name" class="custom-select">
+                    @foreach (var category in ViewBag.CateList as SelectList)
+                    {
+                        <option value="@category.Value">@category.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold text-right">Author Name</label>
+            <div class="col-sm-9">
+                <select name="author-name" class="custom-select">
+                    @foreach (var author in ViewBag.AuthorList as SelectList)
+                    {
+                        <option value="@author.Value">@author.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold text-right">Publisher Name</label>
+            <div class="col-sm-9">
+                <select name="publisher-name" class="custom-select">
+                    @foreach (var publisher in ViewBag.PublisherList as SelectList)
+                    {
+                        <option value="@publisher.Value">@publisher.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold text-right">Price :</label>
+            <div class="col-sm-9">
+                @Html.EditorFor(x => x.Price, new { htmlAttributes = new { @class = "form-control", @type = "number", @value = "0", @min = "0", @max = "99999", @step = "1", @required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold text-right">Quantity :</label>
+            <div class="col-sm-9">
+                @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control", @type = "number", @value = "0", @min = "0", @max = "99999", @required = "required" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold text-right">Is Active :</label>
+            <div class="col-sm-9">
+                <div class="form-check">
+                    @Html.CheckBoxFor(x => x.IsActive, new { @class = "form-check-input" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label font-weight-bold text-right">Image Url :</label>
+            <div class="col-sm-9">
+                <input name="file" type="file" accept="image/*" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+                <button class="btn btn-outline-secondary">Create</button>
+            </div>
+        </div>
+    }
+
+    @Html.ActionLink("Back to list", "GetAllBook")
+</div>
+

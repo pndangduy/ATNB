@@ -1,0 +1,10 @@
+﻿@model IEnumerable<DTO.Category>
+
+<h4 class="text-primary font-italic">Catelogies</h4>
+
+@foreach (var category in Model)
+{
+    <li class="list-group-item">
+        <a href="@Url.Action("GetAllBooksByCategoryID","Home",new {categoryID = category.CateID })">@category.CateName</a>
+    </li>
+}

@@ -1,0 +1,27 @@
+﻿@model DTO.Author
+@{
+    ViewBag.Title = "DetailAuthor";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div id="management-container">
+    <h3>@Model.AuthorName</h3>
+    <hr />
+
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label font-weight-bold text-right">Author Name :</label>
+        <div class="col-sm-9">
+            @Html.TextBoxFor(x => x.AuthorName, new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label font-weight-bold text-right">History :</label>
+        <div class="col-sm-9">
+            @Html.TextBoxFor(x => x.History, new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+
+    @Html.ActionLink("Back to list", "GetAllAuthor")
+</div>
+
