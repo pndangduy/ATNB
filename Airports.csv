@@ -1,0 +1,74 @@
+Airport_Id,Name,MaxFWParkingPlace,MaxHelicopterPakingPlace,Runwaysize,IsActive,,
+AP00001,Tan Son Nhat,33,34,2400,1,,
+AP00002,Cam Ranh,22,26,2100,1,,
+AP00003,Noi Bai,44,47,4400,1,,
+AP00004,Can Tho,55,22,3200,1,,
+,,,,,,,
+Helicopter_ID,Model ,CruiseSpeed,EmtyWeight,MaxTakeOffWeight,Range,FlyMethod,
+RW00001,Eurocopter EC135,254,1455,2910,635,rotated wing,
+RW00002,Eurocopter EC135,254,1455,2910,635,rotated wing,
+RW00003,Eurocopter EC135,254,1455,2910,635,rotated wing,
+RW00004,Eurocopter EC135,254,1455,2910,635,rotated wing,
+RW00005,Eurocopter EC135,254,1455,2910,635,rotated wing,
+RW00006,Eurocopter EC135,254,1455,2910,635,rotated wing,
+RW00007,Eurocopter EC135,254,1455,2910,635,rotated wing,
+RW00008,Eurocopter EC135,254,1455,2910,635,rotated wing,
+RW00009,Eurocopter EC135,254,1455,2910,635,rotated wing,
+RW00010,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00011,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00012,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00013,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00014,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00015,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00016,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00017,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00018,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00019,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00020,Eurocopter AS355 ,224,1305,2540,703,rotated wing,
+RW00021,Mil Mi-8,230,7260,13000,610,rotated wing,
+RW00022,Mil Mi-8,230,7260,13000,610,rotated wing,
+RW00023,Mil Mi-8,230,7260,13000,610,rotated wing,
+RW00024,Mil Mi-8,230,7260,13000,610,rotated wing,
+RW00025,Mil Mi-8,230,7260,13000,610,rotated wing,
+RW00026,Mil Mi-8,230,7260,13000,610,rotated wing,
+RW00027,Mil Mi-8,230,7260,13000,610,rotated wing,
+RW00028,Mil Mi-8,230,7260,13000,610,rotated wing,
+RW00029,Mil Mi-8,230,7260,13000,610,rotated wing,
+RW00030,Mil Mi-8,230,7260,13000,610,rotated wing,
+RW00031,NHIndustries NH90,300,6400,10600,1000,rotated wing,
+RW00032,NHIndustries NH90,300,6400,10600,1000,rotated wing,
+RW00033,NHIndustries NH90,300,6400,10600,1000,rotated wing,
+RW00034,NHIndustries NH90,300,6400,10600,1000,rotated wing,
+RW00035,NHIndustries NH90,300,6400,10600,1000,rotated wing,
+RW00036,NHIndustries NH90,300,6400,10600,1000,rotated wing,
+RW00037,NHIndustries NH90,300,6400,10600,1000,rotated wing,
+RW00038,NHIndustries NH90,300,6400,10600,1000,rotated wing,
+RW00039,NHIndustries NH90,300,6400,10600,1000,rotated wing,
+RW00040,NHIndustries NH90,300,6400,10600,1000,rotated wing,
+,,,,,,,
+FW_ID,Model,FWType_ID,CruiseSpeed,EmtyWeight,MaxTakeOffWeight,MinRunAwaySize,FlyMethod
+FW00001,Boeing707,CAG,607,57600,117000,2300,fixed wing
+FW00002,Boeing707,CAG,607,57600,117000,2300,fixed wing
+FW00003,Boeing707,CAG,607,57600,117000,2300,fixed wing
+FW00004,Boeing707,CAG,607,57600,117000,2300,fixed wing
+FW00005,Boeing707,CAG,607,57600,117000,2300,fixed wing
+FW00006,Boeing727,CAG,917,39800,76700,2500,fixed wing
+FW00007,Boeing727,CAG,917,39800,76700,2500,fixed wing
+FW00008,Boeing727,CAG,917,39800,76700,2500,fixed wing
+FW00009,Boeing727,CAG,917,39800,76700,2500,fixed wing
+FW00010,Boeing727,LGR,917,39800,76700,2500,fixed wing
+FW00011,Boeing777,LGR,892,135850,247200,2440,fixed wing
+FW00012,Boeing777,LGR,892,135850,247200,2440,fixed wing
+FW00013,Boeing777,LGR,892,135850,247200,2440,fixed wing
+FW00014,Boeing777,LGR,892,135850,247200,2440,fixed wing
+FW00015,Boeing777,LGR,892,135850,247200,2440,fixed wing
+FW00016,Boeing767,LGR,850,801270,142882,1900,fixed wing
+FW00017,Boeing767,LGR,850,801270,142882,1900,fixed wing
+FW00018,Boeing767,LGR,850,801270,142882,1900,fixed wing
+FW00019,Boeing767,PRV,850,801270,142882,1900,fixed wing
+FW00020,Boeing767,PRV,850,801270,142882,1900,fixed wing
+FW00021,Boeing767,PRV,850,801270,142882,1900,fixed wing
+FW00022,Boeing767,PRV,850,801270,142882,1900,fixed wing
+FW00023,Boeing767,PRV,850,801270,142882,1900,fixed wing
+FW00024,Boeing767,PRV,850,801270,142882,1900,fixed wing
+FW00025,Boeing767,PRV,850,801270,142882,1900,fixed wing
